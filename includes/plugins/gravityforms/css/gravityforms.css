@@ -1,0 +1,528 @@
+/*
+	Gravity Forms Stylesheet
+*/
+
+/*===============================================================================
+ Global Form Styles
+===============================================================================*/
+
+/* Field Labels */
+
+body .gform_wrapper .top_label .gfield_label {
+	font-weight: bold;
+}
+
+/* Inputs */
+
+body .gform_wrapper input[type="text"],
+body .gform_wrapper input[type="number"],
+body .gform_wrapper input[type="password"],
+body .gform_wrapper input[type="email"],
+body .gform_wrapper input[type="tel"],
+body .gform_wrapper input[type="url"],
+body .gform_wrapper input[type="search"],
+body .gform_wrapper textarea {
+	padding: .45em .6em;
+	font-size: .925em;
+	text-indent: 0;
+}
+
+.gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
+.gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+	margin-bottom: 2px;
+}
+
+body .gform_wrapper .left_label li.hidden_label input,
+body .gform_wrapper .right_label li.hidden_label input {
+	margin-left: 0;
+}
+
+/* Textareas */
+
+body .gform_wrapper textarea.small,
+body .gform_wrapper textarea.medium,
+body .gform_wrapper textarea.large {
+	width: 97.5%;
+}
+
+body .gform_wrapper textarea.small {
+	height: 6em;
+}
+
+/* Date Field */
+
+.gform_wrapper .gfield_date_day,
+.gform_wrapper .gfield_date_month,
+.gform_wrapper .gfield_date_year {
+	margin-top: 0;
+	float: none;
+}
+
+.gform_wrapper .left_label .gfield_date_day,
+.gform_wrapper .left_label .gfield_date_month,
+.gform_wrapper .left_label .gfield_date_year,
+.gform_wrapper .right_label .gfield_date_day,
+.gform_wrapper .right_label .gfield_date_month,
+.gform_wrapper .right_label .gfield_date_year {
+	margin-top: .75em;
+}
+
+.gform_wrapper .gfield_date_day input,
+.gform_wrapper .gfield_date_month input,
+.gform_wrapper .gfield_date_year input {
+	width: 90% !important;
+}
+
+/* Fix spacing above textareas */
+body .gform_wrapper label.gfield_label + div.ginput_container.ginput_container_textarea {
+	margin-top: 1.65em;
+}
+
+/* Style placeholder text */
+::-webkit-input-placeholder {
+   color: #aaa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #aaa;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #aaa;
+}
+
+:-ms-input-placeholder {
+   color: #aaa;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+	transition: text-indent 2s ease, opacity .5s ease;
+	opacity: 0;
+	text-indent: -100%;
+}
+
+[placeholder]:focus::-moz-placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+[placeholder]:focus:::-moz-placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+[placeholder]:focus:-ms-input-placeholder {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+/*===============================================================================
+ Left & Right Aligned Labels
+===============================================================================*/
+
+body .gform_wrapper form ul.left_label li ul.gfield_checkbox li,
+body .gform_wrapper form ul.left_label li ul.gfield_radio li,
+body .gform_wrapper form ul.right_label li ul.gfield_checkbox li,
+body .gform_wrapper form ul.right_label li ul.gfield_radio li,
+body .gform_wrapper ul.left_label li ul.gfield_checkbox li,
+body .gform_wrapper ul.left_label li ul.gfield_radio li,
+body .gform_wrapper ul.right_label li ul.gfield_checkbox li,
+body .gform_wrapper ul.right_label li ul.gfield_radio li {
+	margin-top: .625em;
+}
+
+/*===============================================================================
+ Checkboxes & Radio Buttons
+===============================================================================*/
+
+input,
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"],
+.gform_wrapper ul.gfield_radio li input[type="radio"],
+.widget input[type="checkbox"],
+.widget input[type="radio"],
+.widget .gform_wrapper ul.gfield_checkbox li input[type="checkbox"],
+.widget .gform_wrapper ul.gfield_radio li input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	width: 1em !important;
+	height: 1em;
+	margin: 4px 0 !important;
+	padding: 0;
+	border: 1px solid #eee;
+	line-height: 1.5;
+	font-size: 1em;
+	vertical-align: text-top;
+}
+
+input[type="checkbox"],
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"] {
+	border-radius: 0px;
+}
+
+input[type="checkbox"]:checked,
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked {
+	border: none;
+}
+
+input[type="checkbox"]:checked:after,
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked:after {
+	position: absolute;
+	font-family: FontAwesome;
+	content: '\f00c';
+	left: 2px;
+	bottom: 2px;
+	line-height: 1;
+	font-size: .75em;
+	color: #fff;
+}
+
+input[type="checkbox"]:focus,
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:focus {
+	outline: none;
+}
+
+input[type="radio"],
+.gform_wrapper ul.gfield_radio li input[type="radio"] {
+	border-radius: 100%;
+}
+
+input[type="radio"]:checked,
+.gform_wrapper ul.gfield_radio li input[type="radio"]:checked {
+	background-color: #fff;
+	border: 5px solid;
+}
+
+input[type="radio"]:focus,
+.gform_wrapper ul.gfield_radio li input[type="radio"]:focus {
+	outline: none;
+}
+
+.gform_wrapper.gf_browser_gecko ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+.gform_wrapper.gf_browser_gecko ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+.gform_wrapper.gf_browser_gecko ul.gform_fields li.gfield select {
+	margin-left: 0;
+}
+
+/* Inline Lists */
+
+body .gform_wrapper li.gf_list_inline ul.gfield_checkbox li,
+body .gform_wrapper li.gf_list_inline ul.gfield_radio li {
+	margin: .125em 1.25em .125em 0;
+}
+
+/*===============================================================================
+ Form Styles
+===============================================================================*/
+
+/* Form Styles > Form Centered
+-------------------------------------------------------------------------------*/
+
+/* Center form title & description */
+.gf-centered .gform_heading {
+	text-align: center;
+}
+
+/* Center form fields */
+.gf-centered ul {
+	text-align: center;
+}
+
+/* Center form Submit button */
+.gf-centered .gform_footer.top_label {
+	text-align: center;
+}
+
+/* Form Styles > Centered Button
+-------------------------------------------------------------------------------*/
+
+.gf-centered-button .gform_footer.top_label {
+	text-align: center;
+}
+
+/* Form Styles > Large Button
+-------------------------------------------------------------------------------*/
+
+.gform_wrapper .gf-large-button .gform_footer input.button,
+.gform_wrapper .gf-large-button .gform_footer input[type=submit] {
+	font-size: 1.25em;
+}
+
+/* Form Styles > On Dark
+-------------------------------------------------------------------------------*/
+
+.gf-on-dark input[type="text"],
+.gf-on-dark input[type="number"],
+.gf-on-dark input[type="password"],
+.gf-on-dark input[type="email"],
+.gf-on-dark input[type="tel"],
+.gf-on-dark input[type="url"],
+.gf-on-dark input[type="search"],
+.gf-on-dark input[type="checkbox"],
+.gf-on-dark textarea {
+	background-color: #fff;
+}
+
+.gf-on-dark input[type="submit"] {
+	background-color: #fff;
+	border-radius: 0;
+	color: #333;
+	text-transform: uppercase;
+}
+
+.gf-on-dark input[type="submit"]:hover {
+	background-color: #f0f0f0;
+	color: #333;
+}
+
+/* Form Styles > Modern on Dark
+-------------------------------------------------------------------------------*/
+
+.gf-modern-on-dark input[type="text"],
+.gf-modern-on-dark input[type="number"],
+.gf-modern-on-dark input[type="password"],
+.gf-modern-on-dark input[type="email"],
+.gf-modern-on-dark input[type="tel"],
+.gf-modern-on-dark input[type="url"],
+.gf-modern-on-dark input[type="search"],
+.gf-modern-on-dark input[type="checkbox"],
+.gf-modern-on-dark textarea {
+	background-color: #fff;
+	border: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	color: #333;
+}
+
+.gf-modern-on-dark input[type="submit"] {
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.gf-modern-on-dark input[type="submit"]:hover {
+	background-color: #fff;
+	border-color: transparent;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	color: #333;
+}
+
+/* Form Styles > Modern on White
+-------------------------------------------------------------------------------*/
+
+.gf-modern-on-white input[type="text"],
+.gf-modern-on-white input[type="number"],
+.gf-modern-on-white input[type="password"],
+.gf-modern-on-white input[type="email"],
+.gf-modern-on-white input[type="tel"],
+.gf-modern-on-white input[type="url"],
+.gf-modern-on-white input[type="search"],
+.gf-modern-on-white input[type="checkbox"],
+.gf-modern-on-white textarea {
+	background-color: rgba(0, 0, 0, 0.03);
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #222;
+}
+
+.gf-modern-on-white input[type="submit"] {
+	border-radius: 0;
+}
+
+/* Form Styles > Modern on Light (Transparent Dark)
+-------------------------------------------------------------------------------*/
+
+.gf-modern-on-light-transparent-dark input[type="text"],
+.gf-modern-on-light-transparent-dark input[type="number"],
+.gf-modern-on-light-transparent-dark input[type="password"],
+.gf-modern-on-light-transparent-dark input[type="email"],
+.gf-modern-on-light-transparent-dark input[type="tel"],
+.gf-modern-on-light-transparent-dark input[type="url"],
+.gf-modern-on-light-transparent-dark input[type="search"],
+.gf-modern-on-light-transparent-dark input[type="checkbox"],
+.gf-modern-on-light-transparent-dark textarea {
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #222;
+}
+
+.gf-modern-on-light-transparent-dark input[type="submit"] {
+	border-radius: 0;
+}
+
+.gf-modern-on-light-transparent-dark ::-webkit-input-placeholder {
+   color: #444;
+}
+
+.gf-modern-on-light-transparent-dark :-moz-placeholder { /* Firefox 18- */
+   color: #444;
+}
+
+.gf-modern-on-light-transparent-dark ::-moz-placeholder {  /* Firefox 19+ */
+   color: #444;
+}
+
+.gf-modern-on-light-transparent-dark :-ms-input-placeholder {
+   color: #444;
+}
+
+/* Form Styles > Modern on Light (Transparent Light)
+-------------------------------------------------------------------------------*/
+
+.gf-modern-on-light-transparent-light input[type="text"],
+.gf-modern-on-light-transparent-light input[type="number"],
+.gf-modern-on-light-transparent-light input[type="password"],
+.gf-modern-on-light-transparent-light input[type="email"],
+.gf-modern-on-light-transparent-light input[type="tel"],
+.gf-modern-on-light-transparent-light input[type="url"],
+.gf-modern-on-light-transparent-light input[type="search"],
+.gf-modern-on-light-transparent-light input[type="checkbox"],
+.gf-modern-on-light-transparent-light textarea {
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #333;
+}
+
+.gf-modern-on-light-transparent-light input[type="submit"] {
+	border-radius: 0;
+}
+
+.gf-modern-on-light-transparent-light ::-webkit-input-placeholder {
+   color: #aaa;
+}
+
+.gf-modern-on-light-transparent-light :-moz-placeholder { /* Firefox 18- */
+   color: #aaa;
+}
+
+.gf-modern-on-light-transparent-light ::-moz-placeholder {  /* Firefox 19+ */
+   color: #aaa;
+}
+
+.gf-modern-on-light-transparent-light :-ms-input-placeholder {
+   color: #aaa;
+}
+
+/* Form Styles > Modern on Dark (Transparent Light)
+-------------------------------------------------------------------------------*/
+
+.gf-modern-on-dark-transparent-light input[type="text"],
+.gf-modern-on-dark-transparent-light input[type="number"],
+.gf-modern-on-dark-transparent-light input[type="password"],
+.gf-modern-on-dark-transparent-light input[type="email"],
+.gf-modern-on-dark-transparent-light input[type="tel"],
+.gf-modern-on-dark-transparent-light input[type="url"],
+.gf-modern-on-dark-transparent-light input[type="search"],
+.gf-modern-on-dark-transparent-light input[type="checkbox"],
+.gf-modern-on-dark-transparent-light textarea {
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	color: #111;
+}
+
+.gf-modern-on-dark-transparent-light input[type="submit"] {
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 0;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+	color: #fff;
+	text-shadow: 0 0 .1em rgba(0, 0, 0, 0.13);
+}
+
+.gf-modern-on-dark-transparent-light input[type="submit"]:hover {
+	background-color: inherit;
+	border-color: inherit;
+	color: inherit;
+}
+
+.gf-modern-on-dark-transparent-light ::-webkit-input-placeholder {
+   color: #333;
+}
+
+.gf-modern-on-dark-transparent-light :-moz-placeholder { /* Firefox 18- */
+   color: #333;
+}
+
+.gf-modern-on-dark-transparent-light ::-moz-placeholder {  /* Firefox 19+ */
+   color: #333;
+}
+
+.gf-modern-on-dark-transparent-light :-ms-input-placeholder {
+   color: #333;
+}
+
+/*===============================================================================
+ Form Errors
+===============================================================================*/
+
+.gform_wrapper div.validation_error {
+	padding: 10px 15px;
+	background: none;
+	background-color: #d45135;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.gform_wrapper .gfield_error .gfield_label {
+	color: inherit;
+}
+
+.gform_wrapper li.gfield_error input[type=email],
+.gform_wrapper li.gfield_error input[type=number],
+.gform_wrapper li.gfield_error input[type=password],
+.gform_wrapper li.gfield_error input[type=tel],
+.gform_wrapper li.gfield_error input[type=text],
+.gform_wrapper li.gfield_error input[type=url],
+.gform_wrapper li.gfield_error textarea,
+.gform_wrapper li.gfield_error ul.gfield_checkbox {
+	border: none;
+	-webkit-box-shadow: inset 0 0 2px #d45135;
+	box-shadow: inset 0 0 2px #d45135;
+}
+
+.gform_wrapper .validation_message,
+.gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .top_label .gfield_description.validation_message {
+	padding-top: 0 !important;
+	color: #d45135;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+	margin-top: 0;
+}
+
+.gform_wrapper li.gfield_error div.ginput_complex.ginput_container label,
+.gform_wrapper li.gfield_error ul.gfield_checkbox,
+.gform_wrapper li.gfield_error ul.gfield_radio {
+	color: inherit;
+}
+
+.gform_wrapper li.gfield_error ul.gfield_checkbox {
+	padding: 2px 8px 0;
+}

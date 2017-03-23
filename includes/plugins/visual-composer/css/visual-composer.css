@@ -1,0 +1,325 @@
+/*
+Custom Visual Composer Stylesheet
+
+Author: GreenTent
+Author URI: http://www.greentent.com
+*/
+
+/*===============================================================================
+ Visual Composer: Modules
+===============================================================================*/
+
+/* VC: Modules > Grid Elements
+-------------------------------------------------------------------------------*/
+
+.media-grid-inside-border {
+	border: 15px solid rgba(0,0,0,0.6);
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	-moz-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+}
+
+/* VC: Modules > Google Maps
+-------------------------------------------------------------------------------*/
+
+.wpb_gmaps_widget iframe.map-no-scroll {
+	pointer-events: none;
+}
+
+.wpb_gmaps_widget.map-no-scroll-persistent iframe {
+	pointer-events: none;
+}
+
+/*===============================================================================
+ Total: VC Modules
+===============================================================================*/
+
+/* Total: Modules > Configuration > Overlay Styles
+-------------------------------------------------------------------------------*/
+
+/* Plus Icon Hover (No Fade) */
+.overlay-plus-hover-no-fade {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent url("images/overlay-plus.png") center center no-repeat;
+	transition: all .25s ease-in-out;
+}
+
+.overlay-parent:hover .overlay-plus-hover-no-fade {
+	visibility: visible;
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+/* Plus Icon (Black) Hover (No Fade) */
+.overlay-plus-black-hover-no-fade {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent url("images/overlay-plus-black.png") center center no-repeat;
+	transition: all .25s ease-in-out;
+}
+
+.overlay-parent:hover .overlay-plus-black-hover-no-fade {
+	visibility: visible;
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+/* Total: VC Modules > Configuration > Overlay Hovers
+-------------------------------------------------------------------------------*/
+
+/* Fade Out + Blur + White Inside Border */
+.wpex-image-hover.fade-out-blur-white-inside-border img,
+.wpex-image-hover.fade-out-blur-white-inside-border img {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+.wpex-image-hover.fade-out-blur-white-inside-border > a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+	border: 15px solid transparent;
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	-moz-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-webkit-opacity: 0.0;
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+	z-index: 1;
+}
+
+.wpex-image-hover.fade-out-blur-white-inside-border:hover > a:before {
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.wpex-image-hover.fade-out-blur-white-inside-border img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.wpex-image-hover.fade-out-blur-white-inside-border:hover img {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-o-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Fade In + Blur + Black Inside Border */
+.wpex-image-hover.fade-in-blur-black-inside-border img,
+.wpex-image-hover.fade-in-blur-black-inside-border img {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+.wpex-image-hover.fade-in-blur-black-inside-border > a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.45);
+	border: 15px solid transparent;
+	-webkit-box-shadow: inset 0 0 0 1px #000;
+	-moz-box-shadow: inset 0 0 0 1px #000;
+	box-shadow: inset 0 0 0 1px #000;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-webkit-opacity: 0.0;
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+	z-index: 1;
+}
+
+.wpex-image-hover.fade-in-blur-black-inside-border:hover > a:before {
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.wpex-image-hover.fade-in-blur-black-inside-border img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.wpex-image-hover.fade-in-blur-black-inside-border:hover img {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-o-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Blur + White Inside Border */
+.wpex-image-hover.blur-white-inside-border img,
+.wpex-image-hover.blur-white-inside-border img {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+.wpex-image-hover.blur-white-inside-border > a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 15px solid transparent;
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	-moz-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-webkit-opacity: 0.0;
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+	z-index: 1;
+}
+
+.wpex-image-hover.blur-white-inside-border:hover > a:before {
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.wpex-image-hover.blur-white-inside-border img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.wpex-image-hover.blur-white-inside-border:hover img {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-ms-filter: blur(3px);
+	-o-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Grow + White Inside Border */
+.wpex-image-hover.grow-white-inside-border > a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 15px solid transparent;
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	-moz-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-webkit-opacity: 0.0;
+	-moz-opacity: 0.0;
+	opacity: 0.0;
+	z-index: 1;
+}
+
+.wpex-image-hover.grow-white-inside-border:hover > a:before {
+	-webkit-opacity: 1.0;
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.wpex-image-hover.grow-white-inside-border img {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.wpex-image-hover.grow-white-inside-border:hover img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* Total: VC Modules > Social Share
+-------------------------------------------------------------------------------*/
+
+/* Center Social Share */
+.wpex-social-share-wrap.position-horizontal {
+	text-align: center;
+}
+
+.wpex-social-share-wrap.position-horizontal .theme-heading.social-share-title {
+	text-align: left;
+}
+
+.wpex-social-share.position-horizontal {
+	display: inline-block;
+}
+
+/* Total: VC Modules > Rows & Columns
+-------------------------------------------------------------------------------*/
+
+/* Typography Styles */
+.typography-white-shadow,
+.typography-white-shadow a,
+.typography-white-shadow a:hover,
+.typography-white-shadow h1,
+.typography-white-shadow h2,
+.typography-white-shadow h3,
+.typography-white-shadow h4 {
+	color: #fff;
+	text-shadow: 0 0 .25em rgba(0, 0, 0, 0.6);
+}
+
+.typography-white-shadow p > a {
+	text-decoration: underline;
+}
